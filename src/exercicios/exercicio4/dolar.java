@@ -7,7 +7,8 @@ public class dolar {
     public double IOF = 0.06;
 
     public double conversordolar(){
-        return dolarpreco   * dolarquantidade * 0.94;
+
+        return dolarpreco   * dolarquantidade * 1.06;
     }
 
     @Override

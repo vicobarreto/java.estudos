@@ -14,7 +14,6 @@ public class exercicio5banco {
         boolean encerrado = false;
         System.out.println("Sistema de conta bancaria");
 
-        while(!encerrado){
 
     }
 }
