@@ -1,0 +1,7 @@
+conta bancaria
+-conta
+1 - numero da conta ( nao pode ser alterado) setNumero da conta nao existe
+2 - nome do titular da conta (pode ser alterado)
+3- valor do deposito incial(opcional)  (construtor sem deposito = implementa se nao depositar saldo = 0)
+4-saldo da conta (so aumenta por meio de depositos e diminui por meio de saques) e ( conta pode ficar negativa)
+cada saque tem uma taxa de 5 reais
