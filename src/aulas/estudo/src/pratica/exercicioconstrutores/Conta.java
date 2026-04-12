@@ -4,8 +4,7 @@ public class Conta {
  private int numeroconta;
  private String nome;
  private double conta;
-private double deposito;
-private double saque;
+
 
     public Conta(int numeroconta, String nome) {
         this.numeroconta = numeroconta;
@@ -13,10 +12,10 @@ private double saque;
         this.conta = 0;
     }
 
-    public Conta(int numeroconta, String nome, double conta) {
+    public Conta(int numeroconta, String nome, double depositoinicial) {
         this.numeroconta = numeroconta;
         this.nome = nome;
-        this.conta = conta;
+        depositar(depositoinicial);
     }
 
 
@@ -31,49 +30,27 @@ private double saque;
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+
 
     public double getConta() {
         return conta;
     }
 
-    public void setConta(double conta) {
-        this.conta = conta;
-    }
 
-    public double getDeposito() {
-        return deposito;
-    }
 
-    public void setDeposito(double deposito) {
-        this.deposito = deposito;
-    }
 
-    public double getSaque() {
-        return saque;
-    }
 
-    public void setSaque(double saque) {
-        this.saque = saque;
-    }
 
-    public void depositoinicial( double minhaContadeposito){
-        conta = minhaContadeposito + conta;
-    }
     public void depositar( double deposito) {
-conta = deposito + conta;
+conta += deposito;
     }
     public void sacar( double saque ){
-        if(saque > 0 && saque <= this.conta) {
-            conta =  saque - conta;
+            conta -= saque + 5.0;
             System.out.println("Saque realizado com sucesso!");
-        } else {
-
-            System.out.println("Erro: Saldo insuficiente ou valor inválido.");
-        }
 
 
+    }
+    public String toString() {
+        return "Conta: " + numeroconta + ", nome:  " + nome + ", saldo:  $" +String.format("%.2f", conta);
     }
 }
